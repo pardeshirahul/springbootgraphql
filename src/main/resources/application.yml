@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: springbootgraphql
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/graphql-blog?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+
+  graphql:
+    graphiql:
+      enabled: true
+      path: /graphiql
